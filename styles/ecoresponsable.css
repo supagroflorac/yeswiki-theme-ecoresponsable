@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-ExtraBoldItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-ExtraLight.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-ExtraLight.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-ExtraLightItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Bold.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Thin.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Thin.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-BlackItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-BlackItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Italic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Italic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-MediumItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-MediumItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-BoldItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-BoldItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Regular.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-ExtraBold.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-ExtraBold.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-ThinItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-ThinItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Medium.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-SemiBoldItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-LightItalic.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-LightItalic.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Black.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Black.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins/subset-Poppins-Light.woff2") format("woff2"), url("../fonts/Poppins/subset-Poppins-Light.woff") format("woff"), url("../fonts/Poppins/subset-Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+* {
+  box-sizing: border-box; }
+
+/* Base */
+body {
+  background: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400; }
+
+a {
+  text-decoration: underline; }
+
+h1 {
+  color: #008397;
+  font-weight: bolder; }
+
+h2 {
+  color: white;
+  background: #008397; }
+
+h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #008397; }
+
+/* Layouts */
+body {
+  display: flex;
+  flex-direction: column; }
+
+.l-header {
+  order: 10; }
+
+.l-nav {
+  order: 20; }
+
+.l-main {
+  order: 30;
+  padding: 1em; }
+
+.l-footer {
+  order: 40;
+  background-color: #008397;
+  color: white; }
+
+/* Modules */
+.l-header {
+  display: flex;
+  flex-flow: column;
+  background: #008397;
+  color: white; }
+
+.header-logo {
+  width: 100%; }
+
+.header-subtitle {
+  width: 100%;
+  padding-left: 30%;
+  text-align: left;
+  font-variant: small-caps;
+  font-size: 5vmin;
+  line-height: 5vmin; }
+
+.header-list-sublogo {
+  list-style: none;
+  padding-left: 30%;
+  padding-right: 5%; }
+  .header-list-sublogo li {
+    display: inline; }
+    .header-list-sublogo li .header-sublogo {
+      width: 18%; }
+
+.readnext {
+  background-color: #e8348b;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 0; }
+  .readnext a {
+    text-decoration: none;
+    color: white; }
+
+.menu-burger {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8348b;
+  color: white; }
+  .menu-burger a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    display: flex; }
+  .menu-burger li {
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    flex-direction: column; }
+  .menu-burger ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
+  .menu-burger .menu-submenu {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    transition: visibility .5s;
+    background-color: #008397; }
+  .menu-burger a:hover {
+    background-color: #62b22f; }
+  .menu-burger li:focus {
+    pointer-events: none; }
+  .menu-burger li:focus .menu-submenu {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    z-index: 1;
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto; }
+
+/*# sourceMappingURL=ecoresponsable.css.map */

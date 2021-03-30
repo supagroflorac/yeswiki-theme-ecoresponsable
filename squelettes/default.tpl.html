@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="{{configuration param="lang"}}">
+<head>
+  <!-- HTML Metas -->
+  <meta charset="{{configuration param="charset"}}">
+  {{metarobots}}
+  <meta name="keywords" content="{{configuration param="meta_keywords"}}" />
+  <meta name="description" content="{{configuration param="meta_description"}}" />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Title of the page -->
+  <title>{{configuration param="wakka_name"}} : {{titrepage}}</title>
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="{{configuration param="theme_path"}}images/favicon.ico" />
+  <link rel="apple-touch-icon" href="{{configuration param="theme_path"}}images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="{{configuration param="theme_path"}}images/favicon.png" />
+
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+
+<div class="l-main" role="main" {{doubleclic}}>
+  {WIKINI_PAGE}
+  {{barreredaction}}
+</div>
+
+<header class="l-header">
+  <a class="header-logo" href="./">
+    <img src="{{configuration param="theme_path"}}images/logo-baseline.svg" alt="Logo tous écoresponsable." />
+  </a>
+  <p class="header-subtitle">Le réseau nationnal des <b>écoresponsables de l'enseignement agricole</b>.</p>
+  <ul class="header-list-sublogo">
+    <li><img class="header-sublogo" src="{{configuration param="theme_path"}}images/icone_biodiv.svg" />
+    <li><img class="header-sublogo" src="{{configuration param="theme_path"}}images/icone_energie.svg" />
+    <li><img class="header-sublogo" src="{{configuration param="theme_path"}}images/icone_social.svg" />
+    <li><img class="header-sublogo" src="{{configuration param="theme_path"}}images/icone_air-eau.svg" />
+  </ul>
+</header>
+
+<body {{parambody}}>
+  <nav class="l-nav menu-burger" role="navigation">
+    <ul class="menu-mainmenu">
+      <li><a class="menu-item" href="#" tabindex="-1">Le réseau des écoresponsables</a>
+        <ul class="menu-submenu">
+          <li><a class="menu-item" href="?PresentationDuReseau">Présentation du réseau</a>
+          <li><a class="menu-item" href="?RealistationDuReseau">Les réalisation du réseau</a>
+          <li><a class="menu-item" href="?EcoResponsables">Les écoresponsable</a>
+          <li><a class="menu-item" href="?EcoEncadrants">Les éco-encadrants</a>
+          <li><a class="menu-item" href="#ReseauEnAction">Le réseau en action</a>
+          <li><a class="menu-item" href="#RencontresDuReseau">Les rencontres du réseau</a>
+        </ul>
+      </li>
+      <li><a class="menu-item" href="#" tabindex="-1">Se mettre en réseau</a>
+        <ul class="menu-submenu">
+          <li><a class="menu-item" href="?LesEtablissements">Les établissements</a>
+          <li><a class="menu-item" href="?LesEcoresponsables">Les écoresponsable</a>
+        </ul>
+      </li>
+      <li><a class="menu-item" href="#" tabindex="-1">Les ressources </a>
+        <ul class="menu-submenu">
+          <li><a class="menu-item" href="?PourComprendre">Pour comprendre</a>
+          <li><a class="menu-item" href="?PourMobiliser">Pour mobiliser</a>
+          <li><a class="menu-item" href="?PourAgir">Pour agir</a>
+          <li><a class="menu-item" href="?PourCommuniquer">Pour communiquer</a>
+          <li><a class="menu-item" href="?PourValoriser">Pour valoriser</a>
+        </ul>
+      </li>
+      <li><a class="menu-item" href="#" tabindex="-1">Actualités</a>
+        <ul class="menu-submenu">
+          <li><a class="menu-item" href="?FichesThematique">Fiches thématique</a>
+          <li><a class="menu-item" href="?FichesExperiences">Fiches expériences</a>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <footer class="l-footer">
+    {{include page="PageFooter" class="footerpage" doubleclic="1"}}
+  </footer>
+
+  {{linkjavascript}}
+</body>
+</html>

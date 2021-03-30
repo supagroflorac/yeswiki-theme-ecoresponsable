@@ -1,0 +1,29 @@
+body {
+    background: white;
+    font-family: $font;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: underline;
+}
+
+h1 {
+    color: $color-main;
+    font-weight: bolder;
+}
+
+h2 {
+    color: white;
+    background: $color-main;
+}
+
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-main;
+}
+
+h4 {
+
+}
