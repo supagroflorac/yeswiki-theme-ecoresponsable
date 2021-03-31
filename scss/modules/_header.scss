@@ -1,18 +1,9 @@
 .l-header {
-  display: flex;
-  flex-flow: column;
   background: $color-main;
   color: $color-background
 }
 
-.header-logo {
-  width: 100%;
-}
-
 .header-subtitle {
-  width: 100%;
-  padding-left: 30%;
-  
   text-align: left;
   font-variant: small-caps;
   font-size: 5vmin;
@@ -21,14 +12,34 @@
 
 .header-list-sublogo {
   list-style: none;
-  padding-left: 30%;
-  padding-right: 5%;
-  
   li {
     display: inline;
-
     .header-sublogo {
       width: 18%;
     }
+  }
+}
+
+@media screen and (min-width:$wrapper-width){
+  .header-list-sublogo {
+    padding: 1em;
+    background: url(../images/backgound-sublogo.svg) top left no-repeat ;
+
+    column-count: 2;
+    li {
+      display: inherit;
+      .header-sublogo {
+        width: 100%;
+      }
+    }
+  }
+
+ 
+
+  .header-subtitle {
+    text-align: left;
+    font-variant: small-caps;
+    font-size: 2em;
+    line-height: 1em;
   }
 }

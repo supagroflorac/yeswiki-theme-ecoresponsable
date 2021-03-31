@@ -1,0 +1,19 @@
+.l-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto $wrapper-width auto;
+
+  div.page {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  div.footer {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+}
