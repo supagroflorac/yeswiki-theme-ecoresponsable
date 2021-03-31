@@ -1,0 +1,27 @@
+.l-header {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: auto;
+  }
+  
+  .header-logo {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .header-subtitle {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  
+  .header-list-sublogo {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+  

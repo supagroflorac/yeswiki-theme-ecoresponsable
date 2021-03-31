@@ -7,7 +7,6 @@
 
   a {
     text-decoration: none;
-    text-align: center;
     color: $color-background;
     padding: 1em;
     display: flex;
@@ -15,42 +14,46 @@
   
   li {
     list-style: none;
-    text-align: center;
-    display: inline-block;
     flex-direction: column;
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     padding: 0;
-  }
-
-  .menu-submenu {
-    visibility: hidden;
-    display: none;
-    opacity: 0;
-    transition: visibility .5s;
-    background-color: $color-main;
   }
 
   a:hover {
     background-color: $color-nature;
   }
+}
 
-  li:focus {
-    pointer-events: none;
-  }
-
-  li:focus .menu-submenu
-  {
-    opacity: 1;
-    visibility: visible;
+@media screen and (min-width:$wrapper-width){
+  .menu-burger {
     display: flex;
-    z-index: 1;
-    /* don't let pointer-events affect descendant elements */
-    pointer-events: auto;
+    flex-direction: row;
+    width: 720px;
+    margin: auto;
+    margin-top: -1em;
+
+    background-color: white;
+    border-bottom: 2px $color-social solid;
+
+    a {
+      color: $color-social;
+    }
+
+    a:hover {
+      background-color: transparent;
+    }
+
+    ul {
+      margin: auto;
+    }
+
+    li {
+      display: inline-block;
+    }
+
   }
 }
 
