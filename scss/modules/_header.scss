@@ -22,6 +22,16 @@
     .header-sublogo {
       width: 18%;
     }
+
+    .header-sublogo-text {
+      display: none;
+      text-align: center;
+    }
+
+    .nature { color: $color-nature; }
+    .water { color: $color-water; }
+    .social { color: $color-social; }
+    .energy { color: $color-energy; }
   }
 }
 
@@ -33,13 +43,20 @@
     column-count: 2;
     li {
       display: inherit;
+      text-align: center;
+      font-variant: small-caps;
+      font-weight: bold;
+      
       .header-sublogo {
-        width: 100%;
+        width: 70%;
+        margin: auto;
+      }
+
+      .header-sublogo-text {
+        display: inherit;
       }
     }
   }
-
- 
 
   .header-subtitle {
     text-align: left;
