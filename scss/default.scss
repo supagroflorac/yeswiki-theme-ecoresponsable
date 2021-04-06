@@ -7,7 +7,7 @@
 @import "base";
 
 /* Layouts */
-@import "layout/mobile";
+@import "layout/layout";
 @import "layout/mobile_header";
 @import "layout/desktop_header";
 @import "layout/mobile_main";
@@ -16,6 +16,7 @@
 @import "layout/desktop_footer";
 
 /* Modules */
+@import "modules/reset";
 @import "modules/header";
 @import "modules/readnext";
 @import "modules/menu";
