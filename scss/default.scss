@@ -3,7 +3,6 @@
 @import "site-settings";
 @import "modules/reset";
 
-
 /* Base */
 @import "base";
 
@@ -13,8 +12,11 @@
 @import "layout/desktop_header";
 @import "layout/mobile_main";
 @import "layout/desktop_main";
+@import "layout/mobile_footer";
+@import "layout/desktop_footer";
 
 /* Modules */
 @import "modules/header";
 @import "modules/readnext";
 @import "modules/menu";
+@import "modules/footer";

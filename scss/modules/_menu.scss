@@ -33,17 +33,23 @@
     flex-direction: row;
     width: 720px;
     margin: auto;
-    margin-top: -1em;
-
-    background-color: white;
-    border-bottom: 2px $color-social solid;
+    margin-top: -3em;
+    padding: 2em;
+    background: url(../images/background-menu.svg) top left no-repeat;
 
     a {
       color: $color-social;
+      font-weight: bold;
+      font-family: $font;
+      font-size: 1.1em;
+      border-bottom: 2px $color-social solid;
+      font-variant-caps: small-caps;
     }
 
     a:hover {
       background-color: transparent;
+      font-weight: 800;
+      padding-top: .5em;
     }
 
     ul {
@@ -53,7 +59,6 @@
     li {
       display: inline-block;
     }
-
   }
 }
 

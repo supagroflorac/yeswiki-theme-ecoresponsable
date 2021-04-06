@@ -49,7 +49,45 @@
   </nav>
 
   <footer class="l-footer">
-    {{include page="PageFooter" class="footerpage" doubleclic="1"}}
+    <article class="footer-who">
+      <h1 class="footer-title">Qui sommes nous ?</h1>
+      <p>Les partenaires du projet « Une plateforme de l'éducation au développement durable pour l’enseignement agricole » sont la Direction Générale de l’Enseignement et de la Recherche du Ministère de l’Agriculture, de l’Alimentation, de la pêche, de la ruralité et de l’aménagement du territoire, SupAgro Florac, AgroCampus Ouest ainsi que le réseau national Education au développement durable de l’enseignement agricole
+        <ul>
+          <li>MontpellierSupAgro
+          <li>Animateurs du Réseau National d'Ã?ducation au Développement Durable
+          <li>Direction Générale de l'Enseignement et de la Recherche (DGER)
+        </ul>
+      </p>
+    </article>
+
+    <article class="footer-contact">
+      <h1>Contact</h1>
+      <a href="mailto:reseau-ecoresponsables@supagro.fr">reseau-ecoresponsables@supagro.fr</a>
+      <p class="adress">
+        L'Institut Agro - Florac<br />
+        9 rue Célestin Freinet<br />
+        48400 Florac-trois-rivières<br />
+      </p>
+      <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> <a href="tel:+33466656565">04 66 65 65 65</a>
+    </article>
+      
+    <article class="footer-partners">
+      <ul>
+        <li><img src='{{configuration param="theme_path"}}images/logo-maa.png' />
+        <li><img src='{{configuration param="theme_path"}}images/logo-aventure-vivant.svg' />
+        <li><img src='{{configuration param="theme_path"}}images/logo-institut-agro.png' />
+        <li><img src='{{configuration param="theme_path"}}images/logo-rnedd.jpg' />
+      </ul>
+    </article>
+
+    <article class="footer-informations">
+      <a href="?MentionLegales">Mentions légales</a>
+       - {{login template="modal.tpl.html" nobtn="1"}}
+       - <a href="?GererSite">Administration</a>
+       - <a href="?">Base de données</a>
+      <br /> <br />
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>. 
+    </article>
   </footer>
 
   {{linkjavascript}}

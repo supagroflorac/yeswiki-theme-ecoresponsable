@@ -1,0 +1,36 @@
+@media screen and (min-width:$wrapper-width){
+  .l-footer {
+    display: grid;
+    grid-template-columns: auto calc(#{$wrapper-width}/4) calc(#{$wrapper-width}/2) calc(#{$wrapper-width}/4) auto;
+    grid-template-rows: auto;
+    row-gap: 1em;
+  }
+  
+  .footer-who {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .footer-contact {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .footer-partners {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1 ;
+    grid-row-end: 1;
+  }
+  
+  .footer-informations {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}

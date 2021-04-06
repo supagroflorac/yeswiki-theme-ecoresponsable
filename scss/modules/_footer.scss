@@ -1,0 +1,120 @@
+.l-footer {
+  background-color: $color-main;
+  color: $color-background;
+  text-align: center;
+  font-size: 120%;
+  padding: 1em;
+
+  h1 {
+    color: $color-background;
+    margin: 1em;
+  }
+
+  a {
+    color: $color-background;
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
+
+  ul {
+    text-align: left;
+  }
+}
+
+.footer-contact {
+  background-color: $color-background;
+  color: $color-font;
+  padding: 1em 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  
+  h1 {
+    color: $color-main;
+    margin: 0.2em;
+  }
+
+  a {
+    color: $color-main;
+  }
+}
+
+.footer-partners {
+  background-color: $color-background;
+  padding: 1em;
+  margin-bottom: 1em;
+  
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-left: 0;
+ 
+    li {
+      list-style: none;
+      margin: auto;
+      padding: 0;
+  
+      img {
+        width:80%;
+        margin: 1em;
+      }
+    }
+  }
+
+  ul :nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  ul :nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+
+  ul :nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  ul :nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}
+
+@media screen and (min-width:$wrapper-width) {
+  
+  .footer-l {
+    row-gap: 1em;
+  }
+  
+  .footer-who {
+    font-size: 90%;
+  }
+  
+  .footer-contact {
+    
+    h1 {
+      margin: 1em auto;
+    }
+
+    a[href^="mailto"] {
+      font-size: 80%;
+    }
+
+    p {
+      margin: 1em auto;
+    }
+
+  }
+}
