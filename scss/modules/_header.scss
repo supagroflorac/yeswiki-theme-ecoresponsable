@@ -23,11 +23,6 @@
       width: 18%;
     }
 
-    .header-sublogo-text {
-      display: none;
-      text-align: center;
-    }
-
     .nature { color: $color-nature; }
     .water { color: $color-water; }
     .social { color: $color-social; }
@@ -49,12 +44,8 @@
       font-weight: bold;
       
       .header-sublogo {
-        width: 70%;
-        margin: auto;
-      }
-
-      .header-sublogo-text {
-        display: inherit;
+        width: 100%;
+        margin: aumato;
       }
     }
   }
