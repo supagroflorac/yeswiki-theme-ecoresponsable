@@ -12,7 +12,7 @@
    version="1.1"
    viewBox="0 0 258.54 27.441"
    id="svg71"
-   sodipodi:docname="background-menu.svg"
+   sodipodi:docname="background-btn.svg"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
   <defs
      id="defs75" />
@@ -31,13 +31,14 @@
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:zoom="0.88061403"
-     inkscape:cx="683.3158"
+     inkscape:cx="464.71833"
      inkscape:cy="111.69644"
      inkscape:window-x="1920"
      inkscape:window-y="31"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg71"
-     units="px" />
+     units="px"
+     showguides="false" />
   <metadata
      id="metadata65">
     <rdf:RDF>
@@ -51,12 +52,14 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(45.84 236.67)"
-     id="g69">
+     transform="translate(46.665014,237.00085)"
+     id="g69"
+     style="fill:#e8348b;fill-opacity:1">
     <path
-       d="m -41.713,-226.7694 247.73,-5.5616 5.1913,21.9444 -257.05,1.1548 z"
-       fill="#ffffff"
-       id="path67"
+       d="m -42.51636,-234.77906 249.81542,-1.571 2.74946,24.94919 -255.212586,0.78252 z"
+       fill="#fff"
+       id="path1040"
+       style="fill:#e8348b;fill-opacity:1"
        sodipodi:nodetypes="ccccc" />
   </g>
 </svg>

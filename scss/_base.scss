@@ -2,6 +2,7 @@ body {
     background: white;
     font-family: $font;
     font-weight: 400;
+    font-size: 100%;
 }
 
 a {
@@ -14,9 +15,20 @@ h1 {
 }
 
 h2 {
-    color: white;
-    background: $color-main;
+    color: $color-background;
+    background: url(../images/background-h2.svg) top left no-repeat;
+    background-size: cover;
     padding: 0.5em;
+
+    a {
+        color: $color-background;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: $color-background;
+    }
 }
 
 h3 {

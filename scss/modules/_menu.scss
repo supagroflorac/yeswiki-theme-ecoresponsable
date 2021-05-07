@@ -31,11 +31,11 @@
   .menu-burger {
     display: flex;
     flex-direction: row;
-    width: 720px;
     margin: auto;
     margin-top: -3em;
-    padding: 2em;
+    padding: 1.8em;
     background: url(../images/background-menu.svg) top left no-repeat;
+    background-size: contain;
 
     a {
       color: $color-social;
@@ -48,7 +48,7 @@
 
     a:hover {
       background-color: transparent;
-      font-weight: 800;
+      font-weight: 900;
       padding-top: .5em;
     }
 

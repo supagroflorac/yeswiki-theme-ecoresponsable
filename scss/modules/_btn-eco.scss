@@ -1,7 +1,8 @@
 .btn-eco {
     width: 100%;
     padding: 1em;
-    background-color: $color-social;
+    background: url(../images/background-btn.svg) top left no-repeat;
+    background-size: cover;
     color: $color-background;
     text-decoration: none;
     font-size: 110%;

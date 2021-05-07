@@ -15,7 +15,7 @@ section.actus {
       overflow: hidden;
       transition: transform 0.5s ease;
       padding: .5em;
-      margin: .5em;
+      margin: 1em .5em;
       text-align: left;
       width: 100%;
   
@@ -37,7 +37,7 @@ section.actus {
         justify-content: flex-start;
       }
   
-      .dateActuEA {
+      .date {
         font-size: 0.6em;
         align-self: flex-start;
       }
@@ -68,6 +68,16 @@ section.actus {
       .actuEAButton {
         text-align: right;
         justify-self: end;
+        
+        
+        a {
+            color: $color-background;
+            background: url(../images/background-h2.svg) top left no-repeat;
+            background-size: cover;
+            padding: .5em 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
       }
     }
   }

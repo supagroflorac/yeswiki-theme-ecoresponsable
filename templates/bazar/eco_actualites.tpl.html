@@ -1,25 +1,36 @@
 <?php
 
+$overviewLength = 300;
+
 if (count($fiches) > 0) {
+  echo $pager_links;
   print("<section class=\"actus\">\n");
 }
 
+$themePath = "themes/ecoresponsables/";
+$altThemePath = "custom/{$themePath}";
+if (is_dir($altThemePath) === true) {
+  $themePath = $altThemePath;
+}
+
 foreach($fiches as $fiche) {
-    $image = "<img src='files/backgrounds/defautedd.jpg' />\n";
+    $image = "<img src='{$themePath}/images/actus.jpg' />\n";
     if (isset($fiche['imagebf_image']) and !empty($fiche['imagebf_image'])) {
-         $image = "<img src='"
-            . redimensionner_image(
-              'files/' . $fiche['imagebf_image'],
-              'cache/image_240_240_' . $fiche['imagebf_image'],
-              240, 240, 'crop'
-            )
-            . "' />\n";
+        $imageUri = redimensionner_image(
+          "files/{$fiche['imagebf_image']}",
+          "cache/image_240_240_{$fiche['imagebf_image']}",
+          240, 240, 'crop'
+        ); 
+        if (empty($imageUri) !== true) {
+          $image = "<img src='{$imageUri}'/>\n";
+
+        }
     }
     $page = '?' . $fiche['id_fiche'];
     $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $content = substr(filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), 0, 200);
-    if (strlen(utf8_decode($fiche['bf_resume'])) > 200) {
-      $content .= "… <a href='$page'>lire la suite</a>";
+    $overview = mb_substr(filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), 0, $overviewLength);
+    if (mb_strlen($fiche['bf_resume']) > $overviewLength) {
+      $overview .= "… <a href='$page'>lire la suite</a>";
     }
 
     $link = "";
@@ -48,8 +59,8 @@ foreach($fiches as $fiche) {
       <a class='imageActuEA' href='{$page}'>{$image}</a>\n
       <div class='textActuEA'>
         <h1><a href='{$page}'>{$title}</a></h1>\n
-        <p class='dateActuEA'>{$date}</p>\n
-        <p>{$content}</p>\n
+        <p class='date'>{$date}</p>\n
+        <p class='overview'>{$overview}</p>\n
         {$button}
       </div>
     </article>\n
@@ -61,4 +72,5 @@ foreach($fiches as $fiche) {
 
 if (count($fiches) > 0) {
   print("</section>\n");
+  echo $pager_links;
 }

@@ -1,4 +1,5 @@
 /releases
 /.sass-cache
 /styles/ecoresponsable.css
-/stules/ecoresponsable.css.map
+/styles/ecoresponsable.css.map
+copy_from_original.sh

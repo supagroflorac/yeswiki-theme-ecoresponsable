@@ -12,7 +12,7 @@
    version="1.1"
    viewBox="0 0 258.54 27.441"
    id="svg71"
-   sodipodi:docname="background-menu.svg"
+   sodipodi:docname="h2_background.svg"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
   <defs
      id="defs75" />
@@ -31,7 +31,7 @@
      showgrid="false"
      inkscape:pagecheckerboard="true"
      inkscape:zoom="0.88061403"
-     inkscape:cx="683.3158"
+     inkscape:cx="464.71833"
      inkscape:cy="111.69644"
      inkscape:window-x="1920"
      inkscape:window-y="31"
@@ -54,9 +54,17 @@
      transform="translate(45.84 236.67)"
      id="g69">
     <path
-       d="m -41.713,-226.7694 247.73,-5.5616 5.1913,21.9444 -257.05,1.1548 z"
-       fill="#ffffff"
-       id="path67"
-       sodipodi:nodetypes="ccccc" />
+       d="m-41.713-231.13 247.73-5.5616 5.1913 26.305-257.05 1.1548z"
+       fill="#fff"
+       id="path67" />
+    <path
+       d="m-41.713-231.13 247.73-5.5616 5.1913 26.305-257.05 1.1548z"
+       fill="#fff"
+       id="path1038" />
+    <path
+       d="m-41.713-231.13 247.73-5.5616 5.1913 26.305-257.05 1.1548z"
+       fill="#fff"
+       id="path1040"
+       style="fill:#008397;fill-opacity:1" />
   </g>
 </svg>
