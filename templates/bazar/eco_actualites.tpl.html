@@ -1,0 +1,64 @@
+<?php
+
+if (count($fiches) > 0) {
+  print("<section class=\"actus\">\n");
+}
+
+foreach($fiches as $fiche) {
+    $image = "<img src='files/backgrounds/defautedd.jpg' />\n";
+    if (isset($fiche['imagebf_image']) and !empty($fiche['imagebf_image'])) {
+         $image = "<img src='"
+            . redimensionner_image(
+              'files/' . $fiche['imagebf_image'],
+              'cache/image_240_240_' . $fiche['imagebf_image'],
+              240, 240, 'crop'
+            )
+            . "' />\n";
+    }
+    $page = '?' . $fiche['id_fiche'];
+    $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $content = substr(filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), 0, 200);
+    if (strlen(utf8_decode($fiche['bf_resume'])) > 200) {
+      $content .= "… <a href='$page'>lire la suite</a>";
+    }
+
+    $link = "";
+    if (isset($fiche['bf_site_internet']) and !empty($fiche['bf_site_internet'])) {
+      $link = "<a href='" . $fiche['bf_site_internet'] . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
+    }
+
+    $file = "";
+    if (isset($fiche['fichierfichier1']) and !empty($fiche['fichierfichier1'])) {
+        $file = "<a href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
+    }
+
+    $button = "";
+    if (!empty($file) or !empty($link)) {
+      $button = "<span class='actuEAButton'>$file $link</span>\n";
+    }
+
+    setlocale(LC_TIME, 'fr_FR.UTF-8');
+    $dateFormat = "%e %B %G";
+    $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
+    if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
+      $date = 'Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
+    }
+
+    $html = "<article class='actus'>\n
+      <a class='imageActuEA' href='{$page}'>{$image}</a>\n
+      <div class='textActuEA'>
+        <h1><a href='{$page}'>{$title}</a></h1>\n
+        <p class='dateActuEA'>{$date}</p>\n
+        <p>{$content}</p>\n
+        {$button}
+      </div>
+    </article>\n
+    ";
+
+    printf($html);
+}
+
+
+if (count($fiches) > 0) {
+  print("</section>\n");
+}

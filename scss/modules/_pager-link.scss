@@ -1,0 +1,14 @@
+.pagination {
+
+  li a {
+    color: $color-social;
+  }
+
+  li.active {
+    a {
+      background-color: $color-social;
+      color: $color-background;
+      border-color: $color-social;
+    }
+  }
+}
