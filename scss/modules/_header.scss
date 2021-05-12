@@ -21,6 +21,7 @@
     display: inline;
     .header-sublogo {
       width: 18%;
+      padding: .5em;
     }
 
     .nature { color: $color-nature; }
@@ -33,10 +34,14 @@
 @media screen and (min-width:$wrapper-width){
   .header-list-sublogo {
     padding: 1em;
-    padding-top: 1em;
+    padding-top: 1.2em;
     background: url(../images/background-sublogo.svg) top left no-repeat ;
+    height: 291px;
 
-    column-count: 2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+
     li {
       display: inherit;
       text-align: center;
@@ -44,8 +49,8 @@
       font-weight: bold;
       
       .header-sublogo {
-        width: 100%;
-        margin: aumato;
+        width: 75%;
+        margin: auto;
       }
     }
   }
