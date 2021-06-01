@@ -1,49 +1,49 @@
 body {
-    background: white;
-    font-family: $font;
-    font-weight: 400;
-    font-size: 100%;
+  background: white;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 100%;
 }
 
 a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1 {
-    color: $color-main;
-    font-weight: bolder;
+  color: $color-main;
+  font-weight: bolder;
 }
 
 h2 {
+  color: $color-background;
+  background: url(../images/background-h2.svg) top left no-repeat;
+  background-size: cover;
+  padding: 0.5em;
+  padding-left: 1em;
+
+  a {
     color: $color-background;
-    background: url(../images/background-h2.svg) top left no-repeat;
-    background-size: cover;
-    padding: 0.5em;
-    padding-left: 1em;
+    text-decoration: none;
+  }
 
-    a {
-        color: $color-background;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-        color: $color-background;
-    }
+  a:hover {
+    text-decoration: underline;
+    color: $color-background;
+  }
 }
 
 h3 {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $color-main;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-main;
 }
 
 div.page {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 @media screen and (min-width:$wrapper-width){
-    h2 {
-        width: unset;
-    }
+  h2 {
+    width: unset;
+  }
 }

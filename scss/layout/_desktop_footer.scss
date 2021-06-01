@@ -1,28 +1,23 @@
 @media screen and (min-width:$wrapper-width){
   .l-footer {
     display: grid;
-    grid-template-columns: auto calc(#{$wrapper-width}/4) calc(#{$wrapper-width}/2) calc(#{$wrapper-width}/4) auto;
+    grid-template-columns: auto calc(2*#{$wrapper-width}/3) calc(#{$wrapper-width}/3) auto;
     grid-template-rows: auto;
     row-gap: 1em;
   }
   
   .footer-who {
-    grid-column: 3 / 3;
-    grid-row: 1 / 1;
-  }
-  
-  .footer-contact {
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
+    grid-column: 2;
+    grid-row: 1;
   }
   
   .footer-partners {
-    grid-column: 4 / 4;
-    grid-row: 1 / 1;
+    grid-column: 3;
+    grid-row: 1;
   }
   
   .footer-informations {
-    grid-column: 1 / span 5;
-    grid-row: 3 / 3;
+    grid-column: 1 / span 4;
+    grid-row: 2;
   }
 }

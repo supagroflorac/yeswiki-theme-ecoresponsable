@@ -92,21 +92,14 @@
   
   .footer-who {
     font-size: 90%;
-  }
-  
-  .footer-contact {
-    
+    text-align: left;
+      
     h1 {
-      margin: 1em auto;
-    }
-
-    a[href^="mailto"] {
-      font-size: 80%;
+      margin: .5em auto;
     }
 
     p {
       margin: 1em auto;
     }
-
   }
 }
