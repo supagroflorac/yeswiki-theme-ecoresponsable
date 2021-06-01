@@ -1,15 +1,7 @@
 @charset "UTF-8";
 
-// ----------------------
-// == Site settings
-// ----------------------
-
 $font: 'Poppins', sans-serif;
 
-// = Colors
-// -----------------------------
-
-// Graphic chart
 $color-main: rgb(0, 131, 151);
 $color-water: rgb(0, 185, 233);
 $color-energy: rgb(251, 186, 0);
@@ -18,8 +10,6 @@ $color-nature: rgb(98, 178, 47);
 $color-background: white;
 $color-font: rgb(51, 51, 51);
 
-// = Grid
-// -----------------------------
-
-// Max width wrapper
 $wrapper-width: 980px;
+
+$resource-size: 180px;

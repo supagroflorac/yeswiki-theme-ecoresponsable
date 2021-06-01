@@ -1,0 +1,25 @@
+section.bazar-resources {
+
+  a.resource {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    
+    img {
+      width: 180px;
+      margin: auto;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    p.date {
+      text-align: center;
+    }
+    
+    p.description {
+      
+    }
+  }
+}

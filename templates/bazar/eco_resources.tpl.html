@@ -1,0 +1,58 @@
+<?php
+
+$descriptionLength = 300;
+
+if (count($fiches) > 0) {
+  echo $pager_links;
+  print("<section class=\"bazar-resources\">\n");
+}
+
+$themePath = "themes/ecoresponsables/";
+$altThemePath = "custom/{$themePath}";
+if (is_dir($altThemePath) === true) {
+  $themePath = $altThemePath;
+}
+
+foreach($fiches as $fiche) {
+    $image = "<img src='{$themePath}/images/default_thumb_resources.jpg' />\n";
+    if (isset($fiche['imagethumbs']) and !empty($fiche['imagethumbs'])) {
+        $imageUri = redimensionner_image(
+          "files/{$fiche['imagethumbs']}",
+          "cache/image_180_180_{$fiche['imagethumbs']}",
+          180, 180, 'crop'
+        ); 
+        if (empty($imageUri) !== true) {
+          $image = "<img src='{$imageUri}'/>\n";
+        }
+    }
+
+    $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    
+    $description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
+
+    setlocale(LC_TIME, 'fr_FR.UTF-8');
+    $dateFormat = "%e %B %G";
+    $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
+    if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
+      $date .= ' / Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
+    }
+
+    $html = "
+      <a href='{$url}' class='resource'>\n
+        {$image}\n
+        <h1>{$title}</h1>\n
+        <p class='date'>{$date}</p>\n
+        <p class='description'>{$description}</p>\n
+      </a>\n
+    ";
+
+    printf($html);
+}
+
+
+if (count($fiches) > 0) {
+  print("</section>\n");
+  echo $pager_links;
+}

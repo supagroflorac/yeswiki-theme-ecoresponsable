@@ -1,0 +1,42 @@
+section.bazar-resources {
+  a.resource {
+    text-decoration: none;
+    color: $color-font;
+    background: url(../images/background-resource-left.svg) top left no-repeat;
+    background-size: cover;
+    padding: 2em;
+    margin-right: 2em;
+    transition-property: transform;
+    transition-duration: .25s;
+    
+    img {
+      height: $resource-size;
+    }
+    
+    h1 {
+      color: $color-background;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    p.date {
+      font-size: .8em;
+      color: $color-background;
+      margin-left: 2em;
+    }
+    
+    p.description {
+      color: $color-background;
+    }
+  }
+
+  a.resource:nth-child(odd) {
+    background-image: url(../images/background-resource-right.svg);
+    margin-left: 2em;
+    margin-right: 0;
+  }
+
+  a.resource:hover {
+    transform: scale(1.1);
+  }
+}
