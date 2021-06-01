@@ -24,8 +24,7 @@
 }
 
 .footer-partners {
-  background: url(../images/background-partners.svg) top left no-repeat;
-  background-size: cover;
+  background-color: $color-background;
   padding: 1em;
   margin-bottom: 1em;
   
@@ -69,21 +68,9 @@
 }
 
 @media screen and (min-width:$wrapper-width) {
-  
-  .footer-l {
-    row-gap: 1em;
-  }
-  
-  .footer-who {
-    font-size: 90%;
-    text-align: left;
-      
-    h1 {
-      margin: .5em auto;
-    }
-
-    p {
-      margin: 1em auto;
-    }
+  .footer-partners {
+    background-color: transparent;
+    background: url(../images/background-partners.svg) top left no-repeat;
+    background-size: cover;
   }
 }
