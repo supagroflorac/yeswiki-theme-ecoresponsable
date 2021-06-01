@@ -23,25 +23,9 @@
   }
 }
 
-.footer-contact {
-  background-color: $color-background;
-  color: $color-font;
-  padding: 1em 1em;
-  margin-bottom: 1em;
-  text-align: center;
-  
-  h1 {
-    color: $color-main;
-    margin: 0.2em;
-  }
-
-  a {
-    color: $color-main;
-  }
-}
-
 .footer-partners {
-  background-color: $color-background;
+  background: url(../images/background-partners.svg) top left no-repeat;
+  background-size: cover;
   padding: 1em;
   margin-bottom: 1em;
   
