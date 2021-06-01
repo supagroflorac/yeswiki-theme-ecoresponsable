@@ -1,0 +1,26 @@
+a.resource-random {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+
+  img {
+    margin: auto;
+  }
+
+  h4 {
+    text-align: center;
+    color: $color-main;
+  }
+    
+  p.description {
+    font-size: .8em;
+    color: $color-font;
+    text-align: left;
+  }
+}
+
+a.resource-random:hover {
+  h4 {
+    text-decoration: underline;
+  }
+}

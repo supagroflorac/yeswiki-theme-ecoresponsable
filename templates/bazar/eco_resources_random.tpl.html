@@ -1,0 +1,40 @@
+<?php
+
+$thumb_size = 105;
+
+$themePath = "themes/ecoresponsables/";
+$altThemePath = "custom/{$themePath}";
+if (is_dir($altThemePath) === true) {
+  $themePath = $altThemePath;
+}
+
+$fiche = $fiches[array_rand($fiches, 1)];
+
+$image = "<img src='{$themePath}/images/default_thumb_resources.jpg' />\n";
+if (isset($fiche['imagethumbs']) and !empty($fiche['imagethumbs'])) {
+    $imageUri = redimensionner_image(
+        "files/{$fiche['imagethumbs']}",
+        "cache/image_{$thumb_size}_{$thumb_size}_{$fiche['imagethumbs']}",
+        $thumb_size, $thumb_size, 'crop'
+    ); 
+    if (empty($imageUri) !== true) {
+        $image = "<img src='{$imageUri}'/>\n";
+    }
+}
+
+$title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+$description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+$url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
+
+$html = "
+    <a href='{$url}' class='resource-random'>\n
+    {$image}\n
+    <h4>{$title}</h4>\n
+    <p class='description'>{$description}</p>\n
+    </a>\n
+";
+
+printf($html);
+
