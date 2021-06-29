@@ -1,21 +1,21 @@
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .l-header {
-    order: 10;
+  order: 10;
 }
 
 .l-nav {
-    order: 20;
+  order: 20;
 }
 
 .l-main {
-    order: 30;
+  order: 30;
 }
 
 .l-footer {
-    order: 40;
+  order: 40;
 }
 

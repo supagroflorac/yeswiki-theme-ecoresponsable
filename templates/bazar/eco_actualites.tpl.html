@@ -58,10 +58,11 @@ foreach($fiches as $fiche) {
     $html = "<article class='actus'>\n
       <a class='imageActuEA' href='{$page}'>{$image}</a>\n
       <div class='textActuEA'>
-        <h1><a href='{$page}'>{$title}</a></h1>\n
+        <h1>{$title}</h1>\n
         <p class='date'>{$date}</p>\n
         <p class='overview'>{$overview}</p>\n
         {$button}
+        <a href='{$page}'></a>
       </div>
     </article>\n
     ";

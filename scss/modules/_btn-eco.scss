@@ -8,9 +8,11 @@
     font-size: 110%;
     font-weight: bold;
     margin: 1em 0;
+    transition-delay: $interaction-delay;
+    transition: transform;
 }
 
 .btn-eco:hover {
-    transform: scale(110%);
+    transform: scale($interaction-scale);
     color: $color-background;
 }

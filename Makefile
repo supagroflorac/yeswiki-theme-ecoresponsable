@@ -10,6 +10,11 @@ build:
 	@printf "Building CSS...\n"
 	@sass --style=compact ${INPUT_SCSS}:${OUTPUT_CSS}
 
+pull:
+	@git pull
+
+update: pull build
+
 dev:
 	@sass --watch ${INPUT_SCSS}:${OUTPUT_CSS}
 
@@ -34,4 +39,4 @@ clean:
 
 
 help:
-	@printf "Usage make [release|dev|build|clean|help]\n"
+	@printf "Usage make [release|dev|build|clean|update|help]\n"
