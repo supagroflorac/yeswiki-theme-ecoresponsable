@@ -41,9 +41,9 @@
       color: $color-social;
       font-weight: bold;
       font-family: $font;
-      font-size: 1.1em;
+      font-size: 1.2em;
       border-bottom: 2px $color-social solid;
-      font-variant-caps: small-caps;
+      text-transform: uppercase;
     }
 
     a:hover {
