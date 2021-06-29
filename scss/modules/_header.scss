@@ -4,7 +4,11 @@
 }
 
 .header-logo {
-  img {width: 100%;}
+  margin-top: -2em;
+  img {
+    width: 100%;
+    padding-right: 10em;
+  }
 }
 
 .header-subtitle {
@@ -14,50 +18,32 @@
   line-height: 5vmin;
 }
 
-.header-list-sublogo {
+.header-social-network {
   list-style: none;
+  text-align: right;
+  margin-right: 7em;
   li {
     display: inline;
-    .header-sublogo {
-      width: 18%;
+    .social-network-logo {
+      width: 4em;
       padding: .5em;
     }
-
-    .nature { color: $color-nature; }
-    .water { color: $color-water; }
-    .social { color: $color-social; }
-    .energy { color: $color-energy; }
   }
 }
 
 @media screen and (min-width:$wrapper-width){
-  .header-list-sublogo {
+  .header-logos-themes {
+    //display: block;
     padding: 1em;
     padding-top: 1.2em;
     background: url(../images/background-sublogo.svg) top left no-repeat ;
     height: 291px;
-
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-
-    li {
-      display: inherit;
-      text-align: center;
-      font-variant: small-caps;
-      font-weight: bold;
-      
-      .header-sublogo {
-        width: 75%;
-        margin: auto;
-      }
-
-      .header-sublogo:hover {
-        transform: scale(1.1);
-      }
-    }
   }
 
+  .social-network-logo:hover {
+    transform: scale(1.1);
+  }
+  
   .header-subtitle {
     text-align: right;
     font-variant: small-caps;

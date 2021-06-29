@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="Calque_1"
    x="0px"
    y="0px"
-   viewBox="0 0 750.00002 289.99999"
+   viewBox="0 0 563.82332 211.41515"
    xml:space="preserve"
    sodipodi:docname="logo-baseline-white.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
-   width="750"
-   height="290"><metadata
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   width="563.8233"
+   height="211.41516"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata
    id="metadata45"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
    id="defs43" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -34,14 +34,18 @@
    id="namedview41"
    showgrid="false"
    inkscape:pagecheckerboard="true"
-   inkscape:zoom="0.45254834"
-   inkscape:cx="128.58602"
-   inkscape:cy="-111.00991"
+   inkscape:zoom="0.22627417"
+   inkscape:cx="66.291261"
+   inkscape:cy="-83.96893"
    inkscape:window-x="2885"
    inkscape:window-y="41"
    inkscape:window-maximized="0"
    inkscape:current-layer="Calque_1"
-   inkscape:document-rotation="0" />
+   inkscape:document-rotation="0"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0" />
 <style
    type="text/css"
    id="style2">
@@ -49,7 +53,7 @@
 </style>
 <g
    id="g38"
-   transform="matrix(1.4857004,0,0,1.4857004,-52.333957,-5.4982311)">
+   transform="matrix(1.4857004,0,0,1.4857004,-56.902325,-64.925107)">
 	<g
    id="g6">
 		<path
@@ -102,7 +106,7 @@
    id="path26" />
 		<polygon
    class="st0"
-   points="329.3,144.5 326.2,153.2 332.3,153.2 "
+   points="332.3,153.2 329.3,144.5 326.2,153.2 "
    id="polygon28" />
 		<path
    class="st0"
