@@ -1,0 +1,39 @@
+.crossroad-item {
+  display: grid;
+  width: 100%;
+  background-size: contain;
+
+  min-height: 18em;
+
+  text-decoration: none;
+  color: $color-background;
+
+  padding: 2em;
+  margin-bottom: 2em;
+
+  // transition: transform;
+  //transition-delay: .2s;
+
+  grid-template-rows: 4em auto;
+
+
+  h1 {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 0;
+    margin: 0;
+    color: $color-social;
+  }
+
+  p {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+}
+
+.crossroad-item:hover {
+  text-decoration: none;
+  color: $color-background;
+  transform: scale(1.05);
+}
