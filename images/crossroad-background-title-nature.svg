@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="626.69702"
+   width="1881.0801"
    height="50.001034"
-   viewBox="0 0 165.81359 13.229439"
+   viewBox="0 0 497.70245 13.229439"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="crossroad-background-title-biodiv.svg"
+   sodipodi:docname="crossroad-background-title-nature.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.77058782"
-     inkscape:cx="108.35884"
-     inkscape:cy="377.63379"
+     inkscape:zoom="0.38529391"
+     inkscape:cx="1740.2299"
+     inkscape:cy="633.28278"
      inkscape:window-width="1920"
      inkscape:window-height="1049"
      inkscape:window-x="1920"
@@ -46,7 +46,7 @@
      transform="translate(-80.754959,153.80152)">
     <path
        style="fill:#62b22f;fill-opacity:1;stroke:none;stroke-width:0.232526px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 80.754959,-140.57208 165.813581,-0.01 v -13.21944 l -163.616829,0.46573 z"
+       d="m 80.754959,-140.57208 497.702431,-0.01 v -13.21944 l -495.505679,0.46573 z"
        id="path119"
        sodipodi:nodetypes="ccccc" />
   </g>
