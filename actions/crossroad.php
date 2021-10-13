@@ -6,11 +6,13 @@ if (!defined("WIKINI_VERSION")) {
 $link = $this->getParameter('link');
 $title = $this->getParameter('title');
 $text = $this->getParameter('text');
-$image = $this->getParameter('image');
+//$image = $this->getParameter('image');
+$image = "crossroad-default-image.png";
 
-print("
-<a href='?{$link}' class='crossroad-item' style='background: url(custom/themes/ecoresponsables/images/${image}); background-size: cover;'>
+print("<article class='crossroad-item'>
   <h1>{$title}</h1>
-  <p>{$text}</p>
-</a>
+  <img src='custom/themes/ecoresponsables/images/{$image}' />
+  <p>{$text}</p> 
+  <a class='crossroad-button' href='?{$link}'>Lire la suite</a>
+</article>
 ");
