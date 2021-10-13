@@ -27,10 +27,21 @@
     font-weight: bolder;
     margin: 0;
     color: $color-background;
-    //background-color: $color-social;
-    background: url(../images/crossroad-background-title.svg) $color-background top left no-repeat;
+    background: url(../images/crossroad-background-title-social.svg) $color-background top left no-repeat;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  h1.energy {
+    background: url(../images/crossroad-background-title-energy.svg) $color-background top left no-repeat;
+  }
+
+  h1.water {
+    background: url(../images/crossroad-background-title-water.svg) $color-background top left no-repeat;
+  }
+
+  h1.nature {
+    background: url(../images/crossroad-background-title-nature.svg) $color-background top left no-repeat;
   }
 
   img {
@@ -60,6 +71,18 @@
     text-decoration: none;
     font-weight: bolder;
     margin-bottom: 1em;
+  }
+
+  .crossroad-button.energy {
+    background-color: $color-energy;
+  }
+
+  .crossroad-button.water {
+    background-color: $color-water;
+  }
+
+  .crossroad-button.nature {
+    background-color: $color-nature;
   }
 
   .crossroad-button:hover {
