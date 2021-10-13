@@ -9,6 +9,9 @@ $text = $this->getParameter('text', 'Description à ajouter.');
 $color = $this->getParameter('color', 'social');
 $image = $this->getParameter('image', 'crossroad-default-image.png');
 
+$form = new \YesWiki\WikiniFormatter($this);
+$text = $form->format($text);
+
 print("<article class='crossroad-item'>
   <h1 class='{$color}' white top left no-repeat;'>{$title}</h1>
   <img src='custom/themes/ecoresponsables/images/{$image}' />
