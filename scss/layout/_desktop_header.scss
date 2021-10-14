@@ -5,19 +5,24 @@
     grid-template-columns: auto 705px 275px auto;
     padding-bottom: 3em; // Pour prendre en compte le menu qui remonte légèrement sur le header.
   }
-  
-  .header-logo {
-    grid-column: 2;
+
+  .header-social-networks {
+    grid-column: 1 / span 4;
     grid-row: 1;
   }
   
-  .header-subtitle {
+  .header-logo {
     grid-column: 2;
     grid-row: 2;
   }
   
+  .header-subtitle {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
   .header-list-sublogo {
     grid-column: 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / span 3;
   }
 }

@@ -2,20 +2,25 @@
   display: grid;
   grid-template-columns: 35% 65%;
   grid-template-rows: auto;
-  }
-  
-  .header-logo {
+}
+
+.header-social-networks {
   grid-column: 1 / span 2;
-  grid-row: 1 / 1;
-  }
+  grid-row: 1;
+}
   
-  .header-subtitle {
-  grid-column: 2 / 2;
-  grid-row: 2 / 2;
-  }
+.header-logo {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
   
-  .header-list-sublogo {
-  grid-column: 2 / 2;
-  grid-row: 3 / 3;
-  }
+.header-subtitle {
+  grid-column: 2;
+  grid-row: 3;
+}
+  
+.header-list-sublogo {
+  grid-column: 2;
+  grid-row: 4;
+}
   
