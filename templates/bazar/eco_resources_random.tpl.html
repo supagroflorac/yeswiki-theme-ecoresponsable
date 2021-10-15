@@ -1,6 +1,9 @@
 <?php
 
-$thumb_size = 105;
+$thumb_size = 250;
+$textMaxLength = 250;
+
+$list_colors = array("social", "energy", "nature", "water");
 
 $themePath = "themes/ecoresponsables/";
 $altThemePath = "custom/{$themePath}";
@@ -22,19 +25,31 @@ if (isset($fiche['imagethumbs']) and !empty($fiche['imagethumbs'])) {
     }
 }
 
+
+$color = $list_colors[array_rand($list_colors)];
+
 $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
+
+if (mb_strlen($description, "UTF-8") > $textMaxLength) {
+  $description = mb_substr($description, 0, $textMaxLength, "UTF-8");  
+  $description = trim($description) . "[…]";
+}
+
 $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
 
 $html = "
-    <a href='{$url}' class='resource-random'>\n
+  <article class='resources-random'>
     {$image}\n
-    <h4>{$title}</h4>\n
+    <h1 class='{$color}'>{$title}</h1>\n
     <p class='description'>{$description}</p>\n
-    </a>\n
+    <span class='random-buttons-span'>
+      <a class='random-button {$color}' href='{$fiche['url']}'>Voir la fiche</a>\n
+    </span>
+  </article>
 ";
 
-printf($html);
+echo($html);
 
