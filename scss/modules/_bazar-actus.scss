@@ -5,75 +5,108 @@ section.actus {
   width: 100%;
   box-sizing: border-box;
   align-items: center;
-  
-  article.actus {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-    overflow: hidden;
-    transition: transform 0.5s ease;
-    padding: .5em;
-    margin: 1em .5em;
-    text-align: left;
-    width: 100%;
-    
-    a.imageActuEA {
-      flex-shrink: 0;
-      max-width: 20%;
-    }
-    
-    img {
-      width: 7em;
-      height: auto;
-    }
-    
-    .textActuEA {
-      padding: 0 1em;
-      display: flex;
-      flex-flow: column;
-      flex-grow: 2;
-      justify-content: flex-start;
-    }
-    
-    .date {
-      font-size: 0.6em;
-      align-self: flex-start;
-    }
-    
-    h1 {
-      color: $color-main;
-      font-size: 1.5em;
-      font-weight: bold;
-      margin-top: 0;
-    }
-    
-    p {
-      color: #333;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      flex-grow: 2;
-    }
-    
-    .actuEAButton {
-      text-align: right;
-      
-      a {
-        color: $color-background;
-        background: url(../images/background-actus-button.svg) top left no-repeat;
-        background-size: cover;
-        padding: .5em 1em;
-        text-decoration: none;
-        font-weight: bold;
-        transition: transform;
-        transition-delay: .2s;
-      }
+}
 
-      a:hover {
-        transform: scale(105%);
-        color: red;
-      }
-    }
+.actu-article {
+  display: grid;
+  width: 100%;
+
+  min-height: 18em;
+
+  text-decoration: none;
+  color: $color-font;
+
+  padding: 0;
+  margin-bottom: 2em;
+
+  background-color: #EEE;
+
+  grid-template-rows: 50px 2em 1fr 3em;
+  grid-template-columns: 20% auto;
+
+  h1 {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    padding: .6em .6em .6em 1em;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin: 0;
+    color: $color-background;
+    background: url(../images/crossroad-background-title-nature.svg) $color-background top left no-repeat;
+    text-align: left;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+  }
+
+  img {
+    grid-row: 3 / span 4;
+    grid-column: 1;
+    width: calc(100%);
+    padding: 0 1em 2em 1em;
+  }
+
+  .actu-article-date {
+    grid-row: 2;
+    grid-column: 2;
+
+    text-align: right;
+    font-size: .8em;
+    padding: .5em 1em;
+  }
+
+  .actu-article-text {
+    grid-row: 3;
+    grid-column: 2;
+    padding: 0 1em 1em 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .actu-buttons-span {
+    grid-row: 4;
+    grid-column: 2;
+  }
+
+  .actu-button {
+    background-color: $color-nature;
+    color: $color-background;
+    padding: .3em .5em;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-bottom: 1em;
+  }
+}
+
+.actu-article:nth-child(2n) {
+  h1 {
+    background: url(../images/crossroad-background-title-energy.svg) $color-background top left no-repeat;
+  }
+
+  .actu-button {
+    background-color: $color-energy;
+  }
+}
+
+.actu-article:nth-child(3n) {
+  h1 {
+    background: url(../images/crossroad-background-title-water.svg) $color-background top left no-repeat;
+  }
+
+  .actu-button {
+    background-color: $color-water;
+  }
+}
+
+.actu-article:nth-child(4n) {
+  h1 {
+    background: url(../images/crossroad-background-title-social.svg) $color-background top left no-repeat;
+  }
+
+  .actu-button {
+    background-color: $color-social;
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-$overviewLength = 300;
+$textMaxLength = 600;
 
 if (count($fiches) > 0) {
   echo $pager_links;
@@ -14,6 +14,7 @@ if (is_dir($altThemePath) === true) {
 }
 
 foreach($fiches as $fiche) {
+
     $image = "<img src='{$themePath}/images/actus.jpg' />\n";
     if (isset($fiche['imagebf_image']) and !empty($fiche['imagebf_image'])) {
         $imageUri = redimensionner_image(
@@ -26,26 +27,36 @@ foreach($fiches as $fiche) {
 
         }
     }
-    $page = '?' . $fiche['id_fiche'];
     $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $overview = mb_substr(filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), 0, $overviewLength);
-    if (mb_strlen($fiche['bf_resume']) > $overviewLength) {
-      $overview .= "… <a href='$page'>lire la suite</a>";
+    $text = mb_substr(
+      filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+      0,
+      $textMaxLength,
+      "UTF-8"
+    );
+
+    //$form = new \YesWiki\WikiniFormatter($this);
+    //$text = $form->format($text);
+
+    $readmore = "";
+    if (mb_strlen($fiche['bf_resume']) > $textMaxLength) {
+      $text = trim($text) . "...";
+      $readmore = "<a class='actu-button' href='{$fiche['url']}'>lire la suite</a>";
     }
 
     $link = "";
     if (isset($fiche['bf_site_internet']) and !empty($fiche['bf_site_internet'])) {
-      $link = "<a href='" . $fiche['bf_site_internet'] . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
+      $link = "<a class='actu-button' href='" . $fiche['bf_site_internet'] . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
     }
 
     $file = "";
     if (isset($fiche['fichierfichier1']) and !empty($fiche['fichierfichier1'])) {
-        $file = "<a href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
+        $file = "<a class='actu-button' href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
     }
 
     $button = "";
-    if (!empty($file) or !empty($link)) {
-      $button = "<span class='actuEAButton'>$file $link</span>\n";
+    if (!empty($file) or !empty($link) or !empty($readmore)) {
+      $button = "<span class='actu-buttons-span'>{$readmore} {$file} {$link}</span>\n";
     }
 
     setlocale(LC_TIME, 'fr_FR.UTF-8');
@@ -55,19 +66,19 @@ foreach($fiches as $fiche) {
       $date = 'Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
     }
 
-    $html = "<article class='actus'>\n
-      <a class='imageActuEA' href='{$page}'>{$image}</a>\n
-      <div class='textActuEA'>
-        <h1>{$title}</h1>\n
-        <p class='date'>{$date}</p>\n
-        <p class='overview'>{$overview}</p>\n
-        {$button}
-        <a href='{$page}'></a>
-      </div>
+    $html = "<article class='actu-article'>\n
+      <h1>{$title}</h1>\n  
+      {$image}\n
+      <p class='actu-article-date'>{$date}</p>\n
+      <p class='actu-article-text'>{$text}</p>\n
+      {$button}
     </article>\n
     ";
 
-    printf($html);
+    // l'usage de printf entraine une erreur concernant le nombre 
+    // d'argument, surement une chaine type %s faisant qu'il attendant 
+    // des paramètres en plus
+    echo("{$html}");
 }
 
 
