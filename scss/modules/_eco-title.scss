@@ -1,0 +1,31 @@
+.eco-title {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  padding: .6em .6em .6em 1em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin: 0;
+  color: $color-background;
+  background: url(../images/crossroad-background-title-social.svg) $color-background top left no-repeat;
+  text-align: left;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+.eco-title.social {
+  background-image: url(../images/crossroad-background-title-social.svg);
+}
+
+.eco-title.nature  {
+  background-image: url(../images/crossroad-background-title-nature.svg);
+}
+
+.eco-title.water {
+  background-image: url(../images/crossroad-background-title-water.svg);
+}
+
+.eco-title.energy {
+  background-image: url(../images/crossroad-background-title-energy.svg);
+}

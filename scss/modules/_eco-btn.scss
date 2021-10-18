@@ -1,0 +1,31 @@
+.eco-btn {
+  background-color: $color-social;
+  color: $color-background;
+  padding: .3em .5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-bottom: 1em;
+}
+
+.eco-btn:hover {
+  transform: scale($interaction-scale);
+  color: $color-background;
+}
+
+.eco-btn.social {
+  background-color: $color-social;
+}
+
+.eco-btn.nature {
+  background-color: $color-nature;
+}
+
+.eco-btn.water {
+  background-color: $color-water;
+}
+
+.eco-btn.energy {
+  background-color: $color-energy;
+}

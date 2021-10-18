@@ -1,6 +1,9 @@
 <?php
 
-$descriptionLength = 300;
+include_once "custom/themes/ecoresponsables/lib/eco-functions.php";
+
+$thumb_size = 250;
+$textMaxLength = 250;
 
 if (count($fiches) > 0) {
   echo $pager_links;
@@ -13,13 +16,15 @@ if (is_dir($altThemePath) === true) {
   $themePath = $altThemePath;
 }
 
+$fiche = $fiches[array_rand($fiches, 1)];
+
 foreach($fiches as $fiche) {
     $image = "<img src='{$themePath}/images/default_thumb_resources.jpg' />\n";
     if (isset($fiche['imagethumbs']) and !empty($fiche['imagethumbs'])) {
         $imageUri = redimensionner_image(
           "files/{$fiche['imagethumbs']}",
-          "cache/image_180_180_{$fiche['imagethumbs']}",
-          180, 180, 'crop'
+          "cache/image_{$thumb_size}_{$thumb_size}_{$fiche['imagethumbs']}",
+          $thumb_size, $thumb_size, 'crop'
         ); 
         if (empty($imageUri) !== true) {
           $image = "<img src='{$imageUri}'/>\n";
@@ -30,8 +35,6 @@ foreach($fiches as $fiche) {
     
     $description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-    $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
-
     setlocale(LC_TIME, 'fr_FR.UTF-8');
     $dateFormat = "%e %B %G";
     $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
@@ -39,13 +42,20 @@ foreach($fiches as $fiche) {
       $date .= ' / Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
     }
 
+    $color = eco_color_from_title($title);
+
+    $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
+
     $html = "
-      <a href='{$url}' class='resource'>\n
+      <article class='resource'>
         {$image}\n
-        <h1>{$title}</h1>\n
-        <p class='date'>{$date}</p>\n
-        <p class='description'>{$description}</p>\n
-      </a>\n
+        <h1 class='eco-title {$color}'>{$title}</h1>\n
+        <p class='resource-date'>{$date}</p>
+        <p class='resource-description'>{$description}</p>\n
+        <span class='resource-buttons-span'>
+          <a class='eco-btn {$color}' target='_blank' href='{$url}'>Voir la ressource</a>\n
+        </span>
+      </article>
     ";
 
     echo($html);
