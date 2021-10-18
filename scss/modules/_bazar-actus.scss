@@ -68,45 +68,4 @@ section.actus {
     grid-row: 4;
     grid-column: 2;
   }
-
-  .actu-button {
-    background-color: $color-nature;
-    color: $color-background;
-    padding: .3em .5em;
-    font-size: 1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bolder;
-    margin-bottom: 1em;
-  }
-}
-
-.actu-article:nth-child(2n) {
-  h1 {
-    background: url(../images/crossroad-background-title-energy.svg) $color-background top left no-repeat;
-  }
-
-  .actu-button {
-    background-color: $color-energy;
-  }
-}
-
-.actu-article:nth-child(3n) {
-  h1 {
-    background: url(../images/crossroad-background-title-water.svg) $color-background top left no-repeat;
-  }
-
-  .actu-button {
-    background-color: $color-water;
-  }
-}
-
-.actu-article:nth-child(4n) {
-  h1 {
-    background: url(../images/crossroad-background-title-social.svg) $color-background top left no-repeat;
-  }
-
-  .actu-button {
-    background-color: $color-social;
-  }
 }

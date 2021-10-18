@@ -1,57 +1,51 @@
 <?php
 
+include_once "custom/themes/ecoresponsables/lib/eco-functions.php";
+
 $textMaxLength = 600;
+$thumb_size = 180;
 
 if (count($fiches) > 0) {
-  echo $pager_links;
-  print("<section class=\"actus\">\n");
+    echo $pager_links;
+    print("<section class=\"actus\">\n");
 }
 
-$themePath = "themes/ecoresponsables/";
-$altThemePath = "custom/{$themePath}";
-if (is_dir($altThemePath) === true) {
-  $themePath = $altThemePath;
-}
+$themePath = eco_get_theme_path();
 
 foreach($fiches as $fiche) {
-
-    $image = "<img src='{$themePath}/images/actus.jpg' />\n";
-    if (isset($fiche['imagebf_image']) and !empty($fiche['imagebf_image'])) {
-        $imageUri = redimensionner_image(
-          "files/{$fiche['imagebf_image']}",
-          "cache/image_240_240_{$fiche['imagebf_image']}",
-          240, 240, 'crop'
-        ); 
-        if (empty($imageUri) !== true) {
-          $image = "<img src='{$imageUri}'/>\n";
-
-        }
-    }
-    $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $text = mb_substr(
-      filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-      0,
-      $textMaxLength,
-      "UTF-8"
+  
+    $image = eco_resize_image_and_cached(
+        $fiche['imagebf_image'],
+        $thumb_size,
+        $thumb_size,
+        "{$themePath}/images/default-thumb.png"
     );
-
-    //$form = new \YesWiki\WikiniFormatter($this);
-    //$text = $form->format($text);
+    
+    $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    
+    $color = eco_color_from_title($title);
+    
+    $text = mb_substr(
+        filter_var($fiche['bf_resume'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+        0,
+        $textMaxLength,
+        "UTF-8"
+    );
 
     $readmore = "";
     if (mb_strlen($fiche['bf_resume']) > $textMaxLength) {
-      $text = trim($text) . "...";
-      $readmore = "<a class='actu-button' href='{$fiche['url']}'>lire la suite</a>";
+        $text = trim($text) . "[…]";
+        $readmore = "<a class='eco-btn {$color}' href='{$fiche['url']}'>lire la suite</a>";
     }
 
     $link = "";
     if (isset($fiche['bf_site_internet']) and !empty($fiche['bf_site_internet'])) {
-      $link = "<a class='actu-button' href='" . $fiche['bf_site_internet'] . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
+        $link = "<a class='eco-btn {$color}' href='" . $fiche['bf_site_internet'] . "'><i class='glyphicon glyphicon-link'></i> Lien </a>";
     }
 
     $file = "";
     if (isset($fiche['fichierfichier1']) and !empty($fiche['fichierfichier1'])) {
-        $file = "<a class='actu-button' href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
+        $file = "<a class='eco-btn {$color}' href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
     }
 
     $button = "";
@@ -59,16 +53,12 @@ foreach($fiches as $fiche) {
       $button = "<span class='actu-buttons-span'>{$readmore} {$file} {$link}</span>\n";
     }
 
-    setlocale(LC_TIME, 'fr_FR.UTF-8');
-    $dateFormat = "%e %B %G";
-    $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
-    if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
-      $date = 'Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
-    }
+    $date = eco_date_string($fiche);
+
 
     $html = "<article class='actu-article'>\n
-      <h1>{$title}</h1>\n  
-      {$image}\n
+      <h1 class='eco-title {$color}'>{$title}</h1>\n  
+      <img actu-img src='{$image}'/>\n
       <p class='actu-article-date'>{$date}</p>\n
       <p class='actu-article-text'>{$text}</p>\n
       {$button}

@@ -1,34 +1,24 @@
 <?php
 
+include_once "custom/themes/ecoresponsables/lib/eco-functions.php";
+
 $thumb_size = 250;
 $textMaxLength = 250;
 
-$list_colors = array("social", "energy", "nature", "water");
-
-$themePath = "themes/ecoresponsables/";
-$altThemePath = "custom/{$themePath}";
-if (is_dir($altThemePath) === true) {
-  $themePath = $altThemePath;
-}
+$themePath = eco_get_theme_path();
 
 $fiche = $fiches[array_rand($fiches, 1)];
 
-$image = "<img src='{$themePath}/images/default_thumb_resources.jpg' />\n";
-if (isset($fiche['imagethumbs']) and !empty($fiche['imagethumbs'])) {
-    $imageUri = redimensionner_image(
-        "files/{$fiche['imagethumbs']}",
-        "cache/image_{$thumb_size}_{$thumb_size}_{$fiche['imagethumbs']}",
-        $thumb_size, $thumb_size, 'crop'
-    ); 
-    if (empty($imageUri) !== true) {
-        $image = "<img src='{$imageUri}'/>\n";
-    }
-}
-
-
-$color = $list_colors[array_rand($list_colors)];
+$image = eco_resize_image_and_cached(
+  $fiche['imagethumbs'],
+  $thumb_size,
+  $thumb_size,
+  "{$themePath}/images/default-thumb.png"
+);
 
 $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+$color = eco_color_from_title($title);
 
 $description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
@@ -42,11 +32,11 @@ $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
 
 $html = "
   <article class='resources-random'>
-    {$image}\n
+    <img src='{$image}'/>\n
     <h1 class='{$color}'>{$title}</h1>\n
     <p class='description'>{$description}</p>\n
     <span class='random-buttons-span'>
-      <a class='random-button {$color}' href='{$fiche['url']}'>Voir la fiche</a>\n
+      <a class='eco-btn {$color}' href='{$fiche['url']}'>Voir la fiche</a>\n
     </span>
   </article>
 ";

@@ -10,45 +10,32 @@ if (count($fiches) > 0) {
   print("<section class=\"bazar-resources\">\n");
 }
 
-$themePath = "themes/ecoresponsables/";
-$altThemePath = "custom/{$themePath}";
-if (is_dir($altThemePath) === true) {
-  $themePath = $altThemePath;
-}
+$themePath = eco_get_theme_path();
 
 $fiche = $fiches[array_rand($fiches, 1)];
 
 foreach($fiches as $fiche) {
-    $image = "<img src='{$themePath}/images/default_thumb_resources.jpg' />\n";
-    if (isset($fiche['imagethumbs']) and !empty($fiche['imagethumbs'])) {
-        $imageUri = redimensionner_image(
-          "files/{$fiche['imagethumbs']}",
-          "cache/image_{$thumb_size}_{$thumb_size}_{$fiche['imagethumbs']}",
-          $thumb_size, $thumb_size, 'crop'
-        ); 
-        if (empty($imageUri) !== true) {
-          $image = "<img src='{$imageUri}'/>\n";
-        }
-    }
+
+    $image = eco_resize_image_and_cached(
+      $fiche['imagethumbs'],
+      $thumb_size,
+      $thumb_size,
+      "{$themePath}/images/default-thumb.png"
+    );
 
     $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
     $description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-    setlocale(LC_TIME, 'fr_FR.UTF-8');
-    $dateFormat = "%e %B %G";
-    $date = 'Créé le ' . strftime($dateFormat, strtotime($fiche['date_creation_fiche']));
-    if ($fiche['date_creation_fiche'] !== $fiche['date_maj_fiche']) {
-      $date .= ' / Mis à jour le ' . strftime($dateFormat, strtotime($fiche['date_maj_fiche']));
-    }
+    $date = eco_date_string($fiche);
 
     $color = eco_color_from_title($title);
 
     $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
 
     $html = "
-      <article class='resource'>
-        {$image}\n
+      <article class='resource'>\n
+        <img src='{$image}'/>\n
         <h1 class='eco-title {$color}'>{$title}</h1>\n
         <p class='resource-date'>{$date}</p>
         <p class='resource-description'>{$description}</p>\n
