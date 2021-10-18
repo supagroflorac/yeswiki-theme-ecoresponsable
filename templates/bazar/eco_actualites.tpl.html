@@ -3,7 +3,7 @@
 include_once "custom/themes/ecoresponsables/lib/eco-functions.php";
 
 $textMaxLength = 600;
-$thumb_size = 180;
+$thumb_size = 323;
 
 if (count($fiches) > 0) {
     echo $pager_links;
@@ -57,7 +57,7 @@ foreach($fiches as $fiche) {
 
 
     $html = "<article class='actu-article'>\n
-      <h1 class='eco-title {$color}'>{$title}</h1>\n  
+      <h1 class='eco-title {$color}' title='{$title}'>{$title}</h1>\n  
       <img actu-img src='{$image}'/>\n
       <p class='actu-article-date'>{$date}</p>\n
       <p class='actu-article-text'>{$text}</p>\n
