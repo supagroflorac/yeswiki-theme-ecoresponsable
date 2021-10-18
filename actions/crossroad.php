@@ -13,7 +13,7 @@ $form = new \YesWiki\WikiniFormatter($this);
 $text = $form->format($text);
 
 print("<article class='crossroad-item'>
-  <h1 class='{$color}' white top left no-repeat;'>{$title}</h1>
+  <h1 class='eco-title {$color}' title='{$title}' >{$title}</h1>
   <img src='custom/themes/ecoresponsables/images/{$image}' />
   <p>{$text}</p> 
   <a class='eco-btn {$color}' href='?{$link}'>Lire la suite</a>
