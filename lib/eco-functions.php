@@ -12,7 +12,7 @@ function eco_color_from_title(string $title): string {
     return $color;
 }
 
-function eco_resize_image_and_cached(string|null $image, int $width, int $height, string $default_image): string {
+function eco_resize_image_and_cached(mixed $image, int $width, int $height, string $default_image): string {
     if (!isset($image) or empty($image)) {
         return $default_image;
     }

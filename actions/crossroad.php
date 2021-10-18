@@ -16,6 +16,6 @@ print("<article class='crossroad-item'>
   <h1 class='{$color}' white top left no-repeat;'>{$title}</h1>
   <img src='custom/themes/ecoresponsables/images/{$image}' />
   <p>{$text}</p> 
-  <a class='crossroad-button {$color}' href='?{$link}'>Lire la suite</a>
+  <a class='eco-btn {$color}' href='?{$link}'>Lire la suite</a>
 </article>
 ");

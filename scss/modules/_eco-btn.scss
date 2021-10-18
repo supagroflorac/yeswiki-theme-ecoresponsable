@@ -10,27 +10,49 @@
 }
 
 .eco-btn:hover {
-  transform: scale($interaction-scale);
-  color: $color-background;
+  background-color: $color-background;
+  color: $color-social;
 }
 
 .eco-btn.social {
   background-color: $color-social;
 }
 
+.eco-btn.social:hover {
+  background-color: $color-background;
+  color: $color-social;
+}
+
 .eco-btn.nature {
   background-color: $color-nature;
+}
+
+.eco-btn.nature:hover {
+  background-color: $color-background;
+  color: $color-nature;
 }
 
 .eco-btn.water {
   background-color: $color-water;
 }
 
+.eco-btn.water:hover {
+  background-color: $color-background;
+  color: $color-water;
+}
+
 .eco-btn.energy {
   background-color: $color-energy;
+}
+
+.eco-btn.energy:hover {
+  background-color: $color-background;
+  color: $color-energy;
 }
 
 .large {
   width: 100%;
   font-size: 1.2em;
 }
+
+
