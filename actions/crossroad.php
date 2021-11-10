@@ -8,6 +8,7 @@ $title = $this->getParameter('title', 'Titre à ajouter');
 $text = $this->getParameter('text', 'Description à ajouter.');
 $color = $this->getParameter('color', 'social');
 $image = $this->getParameter('image', 'crossroad-default-image.png');
+$class = $this->getParameter('class', '');
 
 if (substr($link, 0, 4) !== 'http') {
     $link = "?{$link}";
@@ -16,7 +17,7 @@ if (substr($link, 0, 4) !== 'http') {
 $form = new \YesWiki\WikiniFormatter($this);
 $text = $form->format($text);
 
-print("<article class='crossroad-item'>
+print("<article class='crossroad-item {$class}'>
   <h1 class='eco-title {$color}' title='{$title}' >{$title}</h1>
   <img src='custom/themes/ecoresponsables/images/{$image}' />
   <p class='description'>{$text}</p> 
