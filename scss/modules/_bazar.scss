@@ -1,0 +1,15 @@
+
+.bazar-search {
+  input.btn.btn-primary {
+    background-color: $color-social;
+    border-color: transparent;
+    height: 46px;
+  }
+
+  input.btn:hover {
+    border-color: #adadad;
+    background-color: $color-background;
+    color: $color-social;
+  }
+
+}
