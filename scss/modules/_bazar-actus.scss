@@ -44,7 +44,7 @@ section.actus {
   img {
     grid-row: 3;
     grid-column: 1;
-    width: calc(100%);
+    width: 100%;
     padding: 0 1em 2em 1em;
   }
 
@@ -75,7 +75,7 @@ section.actus {
 @media screen and (min-width:$wrapper-width){
   .actu-article {
     grid-template-rows: 50px 2em 1fr 3em;
-    grid-template-columns: 20% auto;
+    grid-template-columns: $thumbs-size auto;
 
 
     h1 {
