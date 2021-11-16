@@ -33,7 +33,7 @@ $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
 $html = "
   <article class='resources-random'>
     <img src='{$image}'/>\n
-    <h1 class='eco-title {$color}'>Une ressource</h1>\n
+    <h1 class='eco-title {$color}' title='{$title}'>Un témoignage</h1>\n
     <h2 class='{$color}'>{$title}</h2>\n
     <p class='description'>{$description}</p>\n
     <span class='random-buttons-span'>
