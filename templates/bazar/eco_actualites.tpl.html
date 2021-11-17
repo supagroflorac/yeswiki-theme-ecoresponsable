@@ -7,7 +7,7 @@ $thumb_size = 323;
 
 if (count($fiches) > 0) {
     echo $pager_links;
-    print("<section class=\"actus\">\n");
+    print("<section class=\"eco-bazar-list\">\n");
 }
 
 $themePath = eco_get_theme_path();
@@ -33,7 +33,7 @@ foreach($fiches as $fiche) {
     );
 
     $readmore = "";
-    if (mb_strlen($fiche['bf_resume']) > $textMaxLength) {
+    if (mb_strlen($fiche['bf_resume']) >= $textMaxLength) {
         $text = trim($text) . "[…]";
         $readmore = "<a class='eco-btn {$color}' href='{$fiche['url']}'>lire la suite</a>";
     }
@@ -48,22 +48,26 @@ foreach($fiches as $fiche) {
         $file = "<a class='eco-btn {$color}' href='files/" . $fiche['fichierfichier1'] . "'><i class='glyphicon glyphicon-file'></i> Fichier</a>";
     }
 
-    $button = "";
+    $buttons = "";
     if (!empty($file) or !empty($link) or !empty($readmore)) {
-      $button = "<span class='actu-buttons-span'>{$readmore} {$file} {$link}</span>\n";
+      $buttons = "<span class='eco-bloc-buttons'>
+        {$readmore}
+        {$file}
+        {$link}
+      </span>";
     }
 
     $date = eco_date_string($fiche);
 
-
-    $html = "<article class='actu-article'>\n
-      <h1 class='eco-title {$color}' title='{$title}'>{$title}</h1>\n  
-      <img actu-img src='{$image}'/>\n
-      <p class='actu-article-date'>{$date}</p>\n
-      <p class='actu-article-text'>{$text}</p>\n
-      {$button}
-    </article>\n
-    ";
+    $html = "<article class='eco-bloc'>
+      <h1 class='eco-bloc-title eco-title {$color}' title='{$title}' >{$title}</h1>
+      <img class='eco-bloc-img' src='{$image}' />
+      <div class='eco-bloc-content'>
+        <p class='eco-date'>{$date}</p>
+        <p>{$text}</p>
+      </div>
+      {$buttons}
+    </article>\n";
 
     // l'usage de printf entraine une erreur concernant le nombre 
     // d'argument, surement une chaine type %s faisant qu'il attendant 

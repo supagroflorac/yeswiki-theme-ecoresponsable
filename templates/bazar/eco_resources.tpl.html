@@ -2,12 +2,12 @@
 
 include_once "custom/themes/ecoresponsables/lib/eco-functions.php";
 
-$thumb_size = 323;
+$thumb_size = 250;
 $textMaxLength = 250;
 
 if (count($fiches) > 0) {
   echo $pager_links;
-  print("<section class=\"bazar-resources\">\n");
+  print("<section class=\"eco-bazar-list\">\n");
 }
 
 $themePath = eco_get_theme_path();
@@ -24,26 +24,23 @@ foreach($fiches as $fiche) {
     );
 
     $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    
-    $description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
+    $text = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $date = eco_date_string($fiche);
-
     $color = eco_color_from_title($title);
-
     $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
 
     $html = "
-      <article class='resource'>\n
-        <img src='{$image}'/>\n
-        <h1 class='eco-title {$color}'>{$title}</h1>\n
-        <p class='resource-date'>{$date}</p>
-        <p class='resource-description'>{$description}</p>\n
-        <span class='resource-buttons-span'>
-          <a class='eco-btn {$color}' target='_blank' href='{$url}'>Voir la ressource</a>\n
-        </span>
-      </article>
-    ";
+    <article class='eco-bloc'>
+      <h1 class='eco-bloc-title eco-title {$color}' title='{$title}' >{$title}</h1>
+      <img class='eco-bloc-img' src='{$image}' />
+      <div class='eco-bloc-content'>
+        <p class='eco-date'>{$date}</p>
+        <p>{$text}</p>
+      </div>
+      <span class='eco-bloc-buttons'>
+        <a class='eco-btn {$color}' target='_blank' href='{$url}'>Voir la ressource</a>\n
+      </span>
+    </article>\n";
 
     echo($html);
 }

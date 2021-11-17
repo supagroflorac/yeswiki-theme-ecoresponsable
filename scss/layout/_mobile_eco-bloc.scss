@@ -1,0 +1,67 @@
+.eco-bloc {
+  width: 100%;  
+  display: grid;
+
+  grid-template-rows: 50px auto auto 3em;
+  grid-template-columns: auto;
+
+  background-color: #EEE;
+
+  margin-bottom: 1em;
+}
+
+.eco-bloc-title {
+  grid-row: 1;
+  grid-column: 1;
+} 
+
+.eco-bloc-img {
+  grid-row: 2;
+  grid-column: 1;
+
+  margin: auto;
+  padding: 1em;
+  width: 100%;
+  max-width: 250px;
+  vertical-align: top;
+}
+
+.eco-bloc-content {
+  grid-row: 3;
+  grid-column: 1;
+  padding: 1em;
+
+  h1 {
+    font-size: 1.2em;
+    color: $color-main;
+    margin-top: 0;
+  }
+
+  h1.social {
+    color: $color-social;
+  }
+
+  h1.energy {
+    color: $color-energy;
+  }
+
+  h1.water {
+    color: $color-water;
+  }
+
+  h1.nature {
+    color: $color-nature;
+  }
+
+  .eco-date {
+    font-size: .8em;
+    font-style: italic;
+    text-align: right;
+  }
+}
+
+.eco-bloc-buttons {
+  grid-row: 4;
+  grid-column: 1;
+  padding: 0;
+}

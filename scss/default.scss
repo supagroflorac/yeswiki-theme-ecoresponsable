@@ -16,6 +16,8 @@
 @import "layout/desktop_footer";
 @import "layout/mobile_resources";
 @import "layout/desktop_resources";
+@import "layout/mobile_eco-bloc";
+@import "layout/desktop_eco-bloc";
 
 /* Modules */
 @import "modules/reset";
@@ -23,13 +25,9 @@
 @import "modules/readnext";
 @import "modules/menu";
 @import "modules/footer";
-@import "modules/resources";
 @import "modules/eco-title";
 @import "modules/eco-btn";
-@import "modules/bazar-actus";
+@import "modules/eco-bazar-list";
 @import "modules/pager-link";
-@import "modules/bazar-resources";
-@import "modules/bazar-resources-random";
 @import "modules/bazar";
-@import "modules/action-crossroad";
 @import "modules/attach-img";

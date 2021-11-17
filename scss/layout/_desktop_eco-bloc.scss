@@ -1,0 +1,37 @@
+@media screen and (min-width:$wrapper-width){
+  .eco-bloc {
+    grid-template-rows: 50px 1fr 3em;
+    grid-template-columns: $thumbs-size auto;
+  }
+  
+  .eco-bloc-title {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
+  
+  .eco-bloc-img {
+    grid-row: 2 / span 3;
+    grid-column: 1;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  .eco-bloc-content {
+    grid-row: 2;
+    grid-column: 2;
+    padding-left: 0;
+  }
+  
+  .eco-bloc-buttons {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .eco-bloc.big {
+    grid-template-columns: $big-thumbs-size auto;
+
+    .eco-bloc-content {
+      font-size: 1.2em;
+    }
+  }
+}

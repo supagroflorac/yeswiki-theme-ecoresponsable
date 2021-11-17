@@ -20,8 +20,16 @@ $title = filter_var($fiche['bf_titre'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 $color = eco_color_from_title($title);
 
-$description = filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$text = mb_substr(
+  filter_var($fiche['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+  0,
+  $textMaxLength,
+  "UTF-8"
+);
 
+if (mb_strlen($fiche['description']) > $textMaxLength) {
+  $text = trim($text) . "[…]";
+}
 
 if (mb_strlen($description, "UTF-8") > $textMaxLength) {
   $description = mb_substr($description, 0, $textMaxLength, "UTF-8");  
@@ -31,16 +39,17 @@ if (mb_strlen($description, "UTF-8") > $textMaxLength) {
 $url = filter_var($fiche['bf_url'], FILTER_SANITIZE_URL);
 
 $html = "
-  <article class='resources-random'>
-    <img src='{$image}'/>\n
-    <h1 class='eco-title {$color}'>Une ressource</h1>\n
-    <h2 class='{$color}'>{$title}</h2>\n
-    <p class='description'>{$description}</p>\n
-    <span class='random-buttons-span'>
-      <a class='eco-btn {$color}' href='{$fiche['url']}'>Voir la fiche</a>\n
-    </span>
-  </article>
-";
+<article class='eco-bloc'>
+  <h1 class='eco-bloc-title eco-title {$color}' >Une ressource</h1>
+  <img class='eco-bloc-img' src='{$image}' />
+  <div class='eco-bloc-content'>
+    <h1 class='{$color}'>{$title}</h1>
+    <p>{$text}</p>  
+  </div>
+  <span class='random-buttons-span'>
+    <a class='eco-btn {$color}' href='{$fiche['url']}'>Voir la fiche</a>\n
+  </span>
+</article>\n";
 
 echo($html);
 
